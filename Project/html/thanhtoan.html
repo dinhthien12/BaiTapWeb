@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/thien.css">
+    <!-- JS -->
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/slide.js"></script>
+    <script src="../js/check.js"></script>
+    <script src="../js/thanhtoan.js"></script>
+    <script src="../js/themgiohang.js"></script>
+    <script src="../js/giohang.js"></script>
+
+
+    <title>Luson</title>
+
+</head>
+
+<body>
+    <div class="my-container">
+        <div class="my-header">
+
+            <ul>
+                <li>
+                    <a href="../html/home.html" style="text-decoration: none;">
+                        <img src="../img/lgo.png" alt="Luson" style="width: 100px; height: auto;text-align: center;">
+                    </a>
+                </li>
+                <li>
+                    <input type="text" for="tk" placeholder="Tìm kiếm" style="width: 200px; height: 30px;  padding:10px;border:none;border-radius: 10px;padding-right:40px;">
+                    <img src="../img/search.png" alt="" style="width: 20px; height: auto;margin-left: -25px; ">
+                </li>
+                <li>
+                    <a href="tel:035999325">
+                        <img src="../img/phone-call.png" alt="" class="me_logo"> Liên hệ: 035 999 325</a>
+                </li>
+                <li>
+                    <a href="../html/hethongcuahang.html">
+                        <img src="../img/store.png" alt="" class="me_logo">Hệ thống cửa hàng</a>
+                </li>
+                <li>
+                    <a href="../html/signin.html">
+                        <img src="../img/login.png" alt="" class="me_logo">Đăng ký</a>
+                </li>
+                <li>
+                    <a href="../html/login.html">
+                        <img src="../img/user.png" alt="" class="me_logo">Tài khoản</a>
+                </li>
+                <li>
+                    <a href="../html/giohang.html">
+                        <img src="../img/shopping-cart.png" alt="" class="me_logo">Giỏ hàng</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div id="me2">
+            <ul>
+                <li>
+                    <a href="../html/home.html">TRANG CHỦ</a>
+                </li>
+                <li>
+                    <a href="../html/bsnhat.html">BÁNH SINH NHẬT</a>
+                </li>
+                <li>
+                    <a href="../html/bmybman.html">BÁNH MỲ & BÁNH MẶN</a>
+                </li>
+                <li>
+                    <a href="../html/ckiesMini.html">COOKIES & MINICAKE</a>
+                </li>
+                <li>
+                    <a href="../html/lienhe.html">LIÊN HỆ</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <main class="container my-5">
+            <div class="row">
+                <!-- Thông tin thanh toán -->
+                <div class="col-lg-8">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="fas fa-user-circle me-2"></i>Thông tin thanh toán</h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="checkout-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="fullname" class="form-label">Họ và tên</label>
+                                        <input type="text" class="form-control" id="fullname" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Số điện thoại</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="address" class="form-label">Địa chỉ nhận hàng</label>
+                                        <textarea class="form-control" id="address" rows="3" required></textarea>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="city" class="form-label">Tỉnh/Thành phố</label>
+                                        <select class="form-select" id="city" class="form-control" required>
+                                            <option value="">Chọn tỉnh/thành phố</option>
+                                            <option value="hanoi">Hà Nội</option>
+                                            <option value="hcm">TP. Hồ Chí Minh</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="district" class="form-label">Quận/Huyện</label>
+                                        <select class="form-select" id="district" class="form-control" required>
+                                            <option value="">Chọn quận/huyện</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="note" class="form-label">Ghi chú (nếu có)</label>
+                                        <textarea class="form-control" id="note" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="fas fa-truck me-2"></i>Phương thức vận chuyển</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="shipping" id="standard-shipping" checked>
+                                <label class="form-check-label" for="standard-shipping">
+                                    <strong>Giao hàng tiêu chuẩn</strong> - 20.000đ (3-5 ngày)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="shipping" id="fast-shipping">
+                                <label class="form-check-label" for="fast-shipping">
+                                    <strong>Giao hàng nhanh</strong> - 40.000đ (1-2 ngày)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tóm tắt đơn hàng -->
+                <div class="col-lg-4">
+                    <div class="card shadow-sm sticky-top" style="top: 100px;">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="fas fa-receipt me-2"></i>Tóm tắt đơn hàng</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th>Sản phẩm</th>
+                                            <th class="text-end">Tổng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="order-summary">
+                                        <!-- Sản phẩm sẽ được thêm bằng JavaScript -->
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Tạm tính:</th>
+                                            <td class="text-end" id="subtotal">0đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phí vận chuyển:</th>
+                                            <td class="text-end" id="shipping-fee">0đ</td>
+                                        </tr>
+                                        <tr class="border-top">
+                                            <th>Tổng cộng:</th>
+                                            <td class="text-end fw-bold fs-5 text-danger" id="total-amount">0đ</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-light">
+                            <div class="mb-3">
+                                <label class="form-label">Phương thức thanh toán</label>
+                                <select class="form-select" id="payment-method">
+                                    <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                                    <option value="momo">Ví điện tử MoMo</option>
+                                    <option value="bank">Chuyển khoản ngân hàng</option>
+                                </select>
+                            </div>
+                            <button type="submit" form="checkout-form" class="btn btn-success w-100 py-3 fw-bold">
+                                <i class="fas fa-credit-card me-2"></i>HOÀN TẤT ĐƠN HÀNG
+                            </button>
+                            <p class="text-muted small mt-2 mb-0">Bằng cách nhấn nút này, bạn đồng ý với <a href="../html/Policy.html">Điều khoản dịch vụ</a> của chúng tôi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="my-footer">
+            <div class="container-fluid contai-footer">
+                <div class="row text-white py-5">
+                    <div class="col-md-3">
+                        <p style="font-size: 35px; font-family: 'Times New Roman', Times, serif;">
+                            <img src="../img/lgo.png" alt="Luson" style="width: 100px; height: auto;"> LUSON
+                        </p>
+                        <p><img src="../img/home.png" style="width: 30px;"> 52 Nguyễn Văn Nghi, Gò Vấp, TP. HCM</p>
+                        <p><img src="../img/phone-call.png" style="width: 30px;"> 035 999 325</p>
+                        <p><img src="../img/email.png" style="width: 30px;"> luson@gmail.com</p>
+                    </div>
+                    <div class="col-md-3" style="font-family:Arial, Helvetica, sans-serif;">
+                        <h2 style="font-size: 35px; font-family: 'Times New Roman', Times, serif;margin-top:25px;margin-bottom:40px;">CHÍNH SÁCH</h2>
+                        <p><a href="../html/chinhsachbm.html" style="color:white;margin-bottom:20px;">Chính sách bảo mật</a></p>
+                        <p><a href="../html/chinhsachdt.html" style="color:white;margin-bottom:20px;">Chính sách đổi trả</a></p>
+                        <p><a href="../html/chinhsachvc.html" style="color:white;margin-bottom:20px;">Chính sách vận chuyển</a></p>
+                        <p><a href="../html/chinhsachtt.html" style="color:white;margin-bottom:20px;">Chính sách thanh toán</a></p>
+
+                    </div>
+                    <div class="col-md-3">
+                        <h3 style="font-size: 30px; font-family: 'Times New Roman', Times, serif;margin-top:23px;margin-bottom:20px;">Tương tác với chúng tôi</h3>
+                        <div class="d-flex gap-3 mb-3">
+                            <img src="../img/facebook.png" alt="Facebook" class="icon-social">
+                            <img src="../img/instagram.png" alt="Instagram" class="icon-social">
+                            <img src="../img/youtube.png" alt="YouTube" class="icon-social">
+                            <img src="../img/tiktok.png" alt="TikTok" class="icon-social">
+                        </div>
+                        <h3 style="font-size: 30px; font-family: 'Times New Roman', Times, serif;margin-bottom:20px;">Phương thức thanh toán</h3>
+                        <div class="d-flex gap-3">
+                            <img src="../img/momo.png" class="icon-payment">
+                            <img src="../img/zalo.png" class="icon-payment">
+                            <img src="../img/speepay.png" class="icon-payment">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../img/bct.png" alt="" style="width:250px;border-radius: 20px;margin-top:25px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
